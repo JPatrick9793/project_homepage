@@ -7,7 +7,6 @@ from flask import render_template
 app = Flask(__name__) 
 
 @app.route('/') 
-@app.route('/') 
 def hello_world():
     return render_template('index.html')
 
@@ -17,22 +16,22 @@ def getResumePage():
     return ("This will be my resume page")
 
 @app.route('/Projects')
-def getResumePage():
+def getProjectsPage():
     #return render_template('resume.html')
     return ("This will be my projects page")
 
 @app.route('/Skills')
-def getResumePage():
+def getSkillsPage():
     #return render_template('resume.html')
     return ("This will be my skills page")
 
 @app.route('/About_me')
-def getResumePage():
+def getAboutMePage():
     #return render_template('resume.html')
     return ('This will be my "About me" page')
 
 @app.route('/Contact_me')
-def getResumePage():
+def getContactMePage():
     #return render_template('resume.html')
     return ('This will be my "Contact Me" page')
 
