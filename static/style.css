@@ -4,17 +4,20 @@
   font-family:Courier;
   color: #CCCCCC;
 }
+
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   flex: 1;
 }
+
 .bg, .bg2 {
   background-position: center;
   background-repeat: no-repeat;
@@ -28,40 +31,58 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .bg {
-  background-image: url("http://sf.co.ua/14/05/wallpaper-676903.jpg");
+  background-image: url("https://photos-2.dropbox.com/t/2/AACgBBk7yc_wgRbyD1xvrKMHxpuvdMbS5sVGYZYYQbc4xQ/12/459232002/jpeg/32x32/1/_/1/2/800px-Flickr_-_%E2%80%A6trialsanderrors_-_Hokusai%2C_Under_the_great_wave_off_Kanagawa%2C_ca._1832.jpg/ENPupNsDGAkgBygEKAc/YnPl02PeGhOzoUaCbrYud67ofGmMydls_ds30H6QUW0?size=2048x1536&size_mode=3");
   opacity: 1;
 }
+
 .bg2 {
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.95;
 }
+
 .body_wrapper {
   display: flex;
   flex: 1;
   flex-direction: row;
   padding: 0 4%;
 }
+
 aside {
   width: 15%;
   margin: 1% 0;
 }
-.icon {
+
+header div a {
   font-size: 35px;
   margin-left: 4%;
 }
+
 .icon:hover {
-  color: green;
+  color: rgb(102, 153, 255);
 }
+
 aside div {
-  margin: 1% 0;
+  margin: 10% 0;
 }
-aside div:hover {
+
+aside div a {
+  text-decoration: none;
+}
+
+aside div a:hover {
+  color: rgb(102, 153, 255);
+}
+
+aside div:active {
   color: green;
 }
+
 #main {
   flex: 1;
 }
+
 header {
   font-family:Courier;
   color: #CCCCCC;
@@ -70,18 +91,22 @@ header {
   flex-direction: row;
   padding: 0 4%;
 }
+
 #header_bottom {
   height:0%;
   width:92%;
   border-bottom: 2px dashed white;
   margin: 0 auto;
 }
+
 #name {
   font-size: 35px;
 }
+
 #header_links {
   display: flex;
   flex-direction: row;
   flex: 1;
   justify-content: flex-end;
 }
+
