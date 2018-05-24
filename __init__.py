@@ -16,6 +16,7 @@ def hello_world():
         sudoku_unsolved = request.form['sudoku_board']
         sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
         return (sudoku_solved)
+        # return (sudoku_unsolved)
         
     
 @app.route('/Resume')
