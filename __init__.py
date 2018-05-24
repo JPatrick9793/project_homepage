@@ -1,15 +1,23 @@
 #! --shebang
 
+from sudoku_solver.driver import sudoku_solver
 from flask import Flask 
 from flask import url_for
 from flask import render_template
+from flask import request
 
 app = Flask(__name__) 
 
-@app.route('/') 
+@app.route('/', methods=['POST', 'GET']) 
 def hello_world():
-    return render_template('index.html')
-
+    if request.method == 'GET':
+        return render_template('index.html')
+    if request.method == 'POST':
+        sudoku_unsolved = request.form['sudoku_board']
+        sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
+        return (sudoku_solved)
+        
+    
 @app.route('/Resume')
 def getResumePage():
     #return render_template('resume.html')
