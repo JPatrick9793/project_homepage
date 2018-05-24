@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-  <!-- ReactJS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
 </head>
 
 <body>
@@ -38,23 +34,24 @@
     </div>
     
   </div>
-  
-  <script type="text/jsx">
-  /*** @jsx React.DOM */
-  //import React from 'react';
-  //imoprt ReactDOM from 'react-dom';
-  
-  class Test extends React.Component {
-    render() {
-      return (<h1> Hello world!!! </h1>);
-    }
-    
-  }
-  
-  ReactDOM.render(
-    <Test />,
-    document.getElementById('main');
-  );
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script type="text/jsx">
+
+      /*** @jsx React.DOM */
+
+      var realPython = React.createClass({
+        render: function() {
+          return (<h2>Greetings, from Real Python!</h2>);
+        }
+      });
+
+      ReactDOM.render(
+        React.createElement(realPython, null),
+        document.getElementById('content')
+      );
 
 </body>
 
