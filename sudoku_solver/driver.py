@@ -302,5 +302,5 @@ def sudoku_solver(input_board):
         bt_board = backtracking_search(bt_csp)
         bt_output = ''
         for key in sorted(bt_board.keys()): bt_output += bt_board[key][0]
-        return output, 'BTS'
+        return bt_output, 'BTS'
     
