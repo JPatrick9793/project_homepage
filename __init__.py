@@ -1,6 +1,6 @@
 #! --shebang
 
-from sudoku_solver.driver import sudoku_solver
+from yourapplication.sudoku_solver.driver import sudoku_solver
 from flask import Flask 
 from flask import url_for
 from flask import render_template

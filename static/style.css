@@ -33,13 +33,13 @@ body {
 }
 
 .bg {
-  background-image: url("https://photos-2.dropbox.com/t/2/AACgBBk7yc_wgRbyD1xvrKMHxpuvdMbS5sVGYZYYQbc4xQ/12/459232002/jpeg/32x32/1/_/1/2/800px-Flickr_-_%E2%80%A6trialsanderrors_-_Hokusai%2C_Under_the_great_wave_off_Kanagawa%2C_ca._1832.jpg/ENPupNsDGAkgBygEKAc/YnPl02PeGhOzoUaCbrYud67ofGmMydls_ds30H6QUW0?size=2048x1536&size_mode=3");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg");
   opacity: 1;
 }
 
 .bg2 {
   background-color: black;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .body_wrapper {
