@@ -26,8 +26,7 @@ def getResumePage():
 
 @app.route('/Projects')
 def getProjectsPage():
-    #return render_template('resume.html')
-    return ("This will be my projects page")
+    return render_template('index2.html')
 
 @app.route('/Skills')
 def getSkillsPage():
