@@ -29,9 +29,25 @@
       <div><a href="/Contact_me">Contact_Me</a></div>
     </aside>
     <div id="main">
-      <div><a href="/Projects/GoogleMap">Google Maps API - Restaurant Locator</a></div>
-      <div><a href="/Projects/Sudoku_Solver">Sudoku Solver</a></div>
-      <div><a href="http://18.216.143.250.nip.io/catalog">CRUD Catalog Website</a></div>
+      
+      <form action = '{{ url_for('getProjectsPage') }}' method = 'post'>
+        <div>
+          <p>Enter unsolved sudoku board:</p>
+          <br>
+          <p>Board should be formatted as a single line of 81 numbers representing the unsolved board.</p>
+          <p>Line should start at top left of board and read left to write, row by row, with "0's" representing empty spaces</p>
+          <br>
+          <p>For example:</p>
+          <p>000000000302540000050301070000000004409006005023054790000000050700810000080060009</p>
+        </div>
+        <div>
+          <input type ='text' size='81' name='sudoku_board' placeholder='input unsolved board here, ex: 002003004...'>
+        </div>
+        <div>
+          <input type='submit' value='Calculate!'>
+        </div>
+      </form>
+      
     </div>
   </div>
 <!--<footer>Footer</footer>-->
