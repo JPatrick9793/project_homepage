@@ -49,11 +49,22 @@
         }
       });
 
-      ReactDOM.render(
-        React.createElement(realPython, null),
-        document.getElementById('main')
-      );
+	class Conway extends React.Component {
+		render() {
+			return (<h1>Greetings from John Conway</h1>);
+		}
+	}
 
+      //ReactDOM.render(
+      //  React.createElement(realPython, null),
+      //  document.getElementById('main')
+      //);
+
+	ReactDOM.render(
+		<Conway />,
+		document.getElementById('main')
+	);
+    </script>
 </body>
 
 </html>
