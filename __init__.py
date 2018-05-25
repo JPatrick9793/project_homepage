@@ -19,7 +19,7 @@ def getResumePage():
         return (sudoku_solved)
 
 @app.route('/Projects')
-def getProjectsPage():
+def getSudokuPage():
     return render_template('index_projects.html')
 
 @app.route('/Projects/Sudoku_Solver', methods=['POST', 'GET'])
