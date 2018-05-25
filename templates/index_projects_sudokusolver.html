@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JOHN CONWAY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="bg"></div><div class="bg2"></div>
+<header>
+  <div id="name">JOHN P CONWAY</div>
+  <div id="header_links">
+    <a href="https://github.com/JPatrick9793"><span class="fa fa-github-square icon"></span></a>
+    <a href="https://www.linkedin.com/in/john-p-conway/"><span class="fa fa-linkedin-square icon"></a></span>
+  </div>
+</header>
+<div id="header_bottom"></div>
+<div class="body_wrapper">
+    <aside>
+      <div><a href="/Resume">Resume</a></div>
+      <div><a href="/Projects">Projects</a></div>
+      <div><a href="/Skills">Skills</a></div>
+      <div><a href="/About_me">About_me</a></div>
+      <div><a href="/Contact_me">Contact_Me</a></div>
+    </aside>
+    <div id="main">
+      
+      <form action = '{{ url_for('hello_world') }}' method = 'post'>
+        <div>
+          <p>Enter unsolved sudoku board:</p>
+          <br>
+          <p>Board should be formatted as a single line of 81 numbers representing the unsolved board.</p>
+          <p>Line should start at top left of board and read left to write, row by row, with "0's" representing empty spaces</p>
+          <br>
+          <p>For example:</p>
+          <p>000000000302540000050301070000000004409006005023054790000000050700810000080060009</p>
+        </div>
+        <div>
+          <input type ='text' size='81' name='sudoku_board' placeholder='input unsolved board here, ex: 002003004...'>
+        </div>
+        <div>
+          <input type='submit' value='Calculate!'>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+<!--<footer>Footer</footer>-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.development.js'></script>
+
+  
+
+</body>
+
+</html>
