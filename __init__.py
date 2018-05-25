@@ -22,6 +22,10 @@ def getResumePage():
 def getProjectsPage():
     return render_template('index_projects.html')
 
+@app.route('/Projects/GoogleMap')
+def getGoogleMapsPage():
+    return render_template('index_projects_googlemap.html')
+
 @app.route('/Projects/Sudoku_Solver', methods=['POST', 'GET'])
 def getSudokuPage():
     if request.method == 'GET':
