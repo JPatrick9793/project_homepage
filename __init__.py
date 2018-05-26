@@ -1,6 +1,7 @@
 #! --shebang
 
 from yourapplication.sudoku_solver.driver import sudoku_solver
+from yourapplication.Eight_Puzzle.driver import eight_puzzle_ast
 from flask import Flask 
 from flask import url_for
 from flask import render_template
@@ -34,6 +35,15 @@ def getSudokuPage():
         sudoku_unsolved = request.form['sudoku_board']
         sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
         return (sudoku_solved)
+
+@app.route('/Projects/Eight_Puzzle_Solver', methods=['POST', 'GET'])
+def getEightPuzzlePage():
+    if request.method == 'GET':
+        return render_template('index_projects_eightpuzzlesolver.html')
+    if request.method == 'POST':
+        eight_puzzle_unsolved = request.form['eight_puzzle_board']
+        true_path, cost, n_nodes, level, search_depth, completion_time, memory = eight_puzzle_ast(eight_puzzle_unsolved)
+        return (true_path)
 
 @app.route('/Skills')
 def getSkillsPage():
