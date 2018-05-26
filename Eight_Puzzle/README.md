@@ -1,6 +1,6 @@
 Format:
 
-> from Eight_Puzzle.driver_3 import eight_puzzle_ast
+> from Eight_Puzzle.driver import eight_puzzle_ast
 >
 > starting_board = '1,4,2,3,0,5,6,7,8'
 >
