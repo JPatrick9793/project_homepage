@@ -43,7 +43,11 @@ def getEightPuzzlePage():
     if request.method == 'POST':
         eight_puzzle_unsolved = request.form['eight_puzzle_board']
         true_path, cost, n_nodes, level, search_depth, completion_time, memory = eight_puzzle_ast(eight_puzzle_unsolved)
-        return (true_path)
+        solved_board = ''
+        for x in true_path:
+            solved_board += x
+            solved_board += ', '
+        return (solved_board)
 
 @app.route('/Skills')
 def getSkillsPage():
