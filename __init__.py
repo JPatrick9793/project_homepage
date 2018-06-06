@@ -65,5 +65,9 @@ def getContactMePage():
 def tester():
     return render_template('test.html')
 
+@app.route('testing/sudoku')
+def tester_sudoku():
+    return ('Something')
+
 if __name__ == '__main__':
     app.run()
