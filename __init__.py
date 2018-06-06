@@ -6,6 +6,7 @@ from flask import Flask
 from flask import url_for
 from flask import render_template
 from flask import request
+from flask import make_response
 from flask import jsonify
 from flask import json
 
@@ -67,11 +68,13 @@ def getContactMePage():
 def tester():
     return render_template('test.html')
 
-@app.route('/testing/sudoku')
+@app.route('/testing/sudoku', methods=['GET','POST'])
 def tester_sudoku():
-    info = 'Some Message!'
-    # return jsonify({'info':info})
-    return json.dumps({'status':'OK', 'message':info})
+    info = {'info':'Some Message!'}
+    resp = make_response(json.dumps(info))
+    resp.status_code = 200
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 
 if __name__ == '__main__':
     app.run()
