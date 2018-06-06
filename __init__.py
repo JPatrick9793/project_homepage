@@ -61,5 +61,9 @@ def getAboutMePage():
 def getContactMePage():
     return ('/nUNDER CONSTRUCTION!!/n/nThis will be my "Contact Me" page')
 
+@app.route('/testing')
+def tester():
+    return render_template('test.html')
+
 if __name__ == '__main__':
     app.run()
