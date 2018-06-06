@@ -7,6 +7,7 @@ from flask import url_for
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import json
 
 app = Flask(__name__) 
 
@@ -69,7 +70,8 @@ def tester():
 @app.route('/testing/sudoku')
 def tester_sudoku():
     info = 'Some Message!'
-    return jsonify({'info':info})
+    # return jsonify({'info':info})
+    return json.dumps({'status':'OK', 'message':info})
 
 if __name__ == '__main__':
     app.run()
