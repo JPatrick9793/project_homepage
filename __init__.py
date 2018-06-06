@@ -70,11 +70,12 @@ def tester():
 
 @app.route('/testing/sudoku', methods=['GET','POST'])
 def tester_sudoku():
-    info = {'info':'Some Message!'}
-    resp = make_response(json.dumps(info))
-    resp.status_code = 200
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-    return resp
+    resp = {'abc':'Some Message!'}
+    # resp = make_response(json.dumps(info))
+    # resp.status_code = 200
+    # resp.headers['Access-Control-Allow-Origin'] = '*'
+    # return resp
+    return jsonify(resp)
 
 if __name__ == '__main__':
     app.run()
