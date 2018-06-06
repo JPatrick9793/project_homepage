@@ -21,7 +21,7 @@ function myFunction(txt) {
 
 function alertSomething() {
     $.ajax({
-      type: "POST",
+      type: "GET",
       url: "http://www.thejohnconway.com/testing/sudoku",
       cache: false,
       dataType: "json",
