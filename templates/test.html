@@ -10,7 +10,27 @@
 </head>
 
 <body>
+  
+        <form action='javascript:myFunction(sudoku_board.value)'>
+        <div>
+          <p>Enter unsolved sudoku board:</p>
+          <br>
+          <p>Board should be formatted as a single line of 81 numbers representing the unsolved board.</p>
+          <p>Line should start at top left of board and read left to write, row by row, with "0's" representing empty spaces</p>
+          <br>
+          <p>For example:</p>
+          <p>000000000302540000050301070000000004409006005023054790000000050700810000080060009</p>
+        </div>
+        <div>
+          <input type ='text' size='81' name='sudoku_board' id='sudoku_board' placeholder='input unsolved board here, ex: 002003004...'>
+        </div>
+        <div>
+          <input type='submit' value='Calculate!'>
+        </div>
+      </form>
 
+  <br><br><br><br><br><br><br><br>
+  
 <input type='button' value='My Button' onclick='alertSomething()'/>
 
 <script type=text/javascript src="{{
