@@ -1,0 +1,24 @@
+function alertSomething() {
+  
+    $.ajax({
+      type: "POST",
+      url: "http://www.thejohnconway.com/testing/sudoku",
+      cache: false,
+      dataType: "json",
+      // IF successful
+      success: function(data) {
+	x = [
+		[1,2,3],
+		[4,5,6],
+		[7,8,9]
+	];
+        alert(x);
+      },
+      // If unsuccessful
+      error: function(data) {
+        alert("There was an error");
+        console.log(data);
+      }
+    });
+  
+}

@@ -68,14 +68,21 @@ def getContactMePage():
 def tester():
     return render_template('test.html')
 
-@app.route('/testing/sudoku', methods=['GET','POST'])
-def tester_sudoku():
+@app.route('/testing/sudoku/<board>', methods=['GET','POST'])
+def tester_sudoku(board):
     if request.method == 'GET':
         resp = {'abc':'Some Message!'}
         return jsonify(resp)
     if request.method == 'POST':
-        txt = request.jason['data']
-        return jsonify({ 'txt':txt })
+
+        sudoku_unsolved = board
+        print ('\n\n::::New Print Line:::::')
+        print (board)
+
+        sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
+        resp = {'solution' : sudoku_solved}
+        return jsonify(resp)
+
 
 if __name__ == '__main__':
     app.run()
