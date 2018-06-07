@@ -82,7 +82,10 @@ def tester_sudoku(board):
         sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
         resp = {'solution' : sudoku_solved}
         return jsonify(resp)
-
+    
+@app.route('/testing/react')
+def tester_react():
+    return render_template('test_react.html')
 
 if __name__ == '__main__':
     app.run()
