@@ -85,7 +85,7 @@ def tester_sudoku(board):
     
 @app.route('/testing/react')
 def tester_react():
-    return render_template('test_react.html')
+    return render_template('index2.html')
 
 if __name__ == '__main__':
     app.run()
