@@ -39,32 +39,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script type="text/jsx">
-
-      /*** @jsx React.DOM */
-
-      var realPython = React.createClass({
-        render: function() {
-          return (<h2>Greetings, from Real Python!</h2>);
-        }
-      });
-
-	class Conway extends React.Component {
-		render() {
-			return (<h1>Greetings from John Conway</h1>);
-		}
-	}
-
-      //ReactDOM.render(
-      //  React.createElement(realPython, null),
-      //  document.getElementById('main')
-      //);
-
-	ReactDOM.render(
-		<Conway />,
-		document.getElementById('main')
-	);
-    </script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/test_react.js') }}"></script>
 </body>
 
 </html>
