@@ -69,7 +69,7 @@ def tester():
     return render_template('test.html')
 
 @app.route('/testing/sudoku/<board>', methods=['GET','POST'])
-def tester_sudoku(board):
+def testing_sudoku_board(board):
     if request.method == 'GET':
         resp = {'abc':'Some Message!'}
         return jsonify(resp)
@@ -84,8 +84,12 @@ def tester_sudoku(board):
         return jsonify(resp)
     
 @app.route('/testing/react')
-def tester_react():
+def testing_react():
     return render_template('index2.html')
+    
+@app.route('/testing/sudokuboard')
+def testing_sudokuboard():
+    return render_template('test_sudoku.html')
 
 if __name__ == '__main__':
     app.run()
