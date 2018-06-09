@@ -90,7 +90,8 @@ class Game extends React.Component {
   // Method to clear the board
   handleClickClear() {
     console.log("You have clicked the Game.handleClickClear button");
-    this.setState({value: Array(81).fill(0)});
+    // this.setState({value: Array(81).fill(0)});
+    location.reload(true);
   }
   
   handleChange() {
@@ -101,7 +102,7 @@ class Game extends React.Component {
     
     // Make array for 1, 2, ...81
     var arraySquare = Array(81);
-    for (var i = 1; i < 82; i++) {arraySquare[i] = i}
+    for (var i = 0; i < 81; i++) {arraySquare[i] = i}
     
     // Render the whole game
     return (
