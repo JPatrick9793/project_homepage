@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 0;
+}
+
+.Square, .Row, .Board {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Square {
+  border: 1px solid black;
+  border-radius: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.Square:hover {
+  background-color: lightblue;
+}
+
+.Row {
+  display: flex;
+  width: 450px;
+  height: 50px;
+}
+
+.Board {
+  display: flex;
+  flex-direction: row;
+  height: 455px;
+  width: 455px;
+  border: 2.5px solid black;
+  margin: 25px auto 0;
+  flex-wrap: wrap;
+}
+
+.Game {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height:550px;
+  border: 2px solid blue;
+}
+
+.SolverButton {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100px;
+  margin: 0 2%;
+}
+
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+}
