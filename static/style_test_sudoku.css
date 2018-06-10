@@ -27,6 +27,15 @@ body, html {
   height: 30px;
   font-size: 10px;
   text-align: right;
+  
+  /* Hide arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+   display: none;
 }
 
 .Square:hover {
