@@ -71,7 +71,8 @@ class Game extends React.Component {
       error: function(data) {
         alert("Error occured");
         console.log(data);
-      }
+      },
+      timeout:10000 //3 second timeout
     });
   }
 
