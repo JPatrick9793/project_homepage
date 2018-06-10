@@ -1,56 +1,49 @@
 class Square extends React.Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {value: this.props.boardValues[this.props.number]}
-    this.handleChange = this.handleChange.bind(this);
-  }
-  
-  handleChange(event) {
-    console.log('You have changed Game.state.value');
-    this.setState({value: event.target.value});
-    this.props.boardValues[this.props.number] = Number(event.target.value);
-  }
-  
+  // Render components
   render() {
     // Make array for 1, 2, ...9
     var arrayVal = Array(9);
-    for (var i = 1; i < 10; i++) {arrayVal[i] = i}
+    for (var i = 1; i < 10; i++) {
+      arrayVal[i] = i;
+    }
     return (
       <select
         className="Square"
-        value={this.state.value}
-        onChange={this.handleChange}>
-        <option value="0"></option>
-      
+        name={this.props.number}
+        value={this.props.boardValues[this.props.number]}
+        onChange={this.props.onChange}
+      >
+        <option value="0" />
+
         {/* Square renders drop-down    */}
-        {arrayVal.map((j) =>
-           <option key={j} value={j}>{j}</option>)}
-      
+        {arrayVal.map(j => (
+          <option key={j} value={j}>
+            {j}
+          </option>
+        ))}
       </select>
     );
-    
   }
-  
 }
 
 class Game extends React.Component {
-  
+  // Constructor
   constructor(props) {
     super(props);
-    this.state = {value: Array(81).fill(0)};
-    
+    this.state = { value: Array(81).fill(0) };
+
     this.handleClickSolve = this.handleClickSolve.bind(this);
     this.handleClickClear = this.handleClickClear.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  
+
   // Method to solve the board
   handleClickSolve() {
-    console.log("You have clicked the Game.handleClickSolve button");
-    var boardString = this.state.value.join('')
-    console.log(boardString); // log for debug
+    // log for debug
+    var boardString = this.state.value.join("");
+    console.log(boardString);
     // Make ajax call to solve
+    var self = this;
     $.ajax({
       type: "POST",
       url: "http://www.thejohnconway.com/testing/sudoku/" + boardString,
@@ -58,89 +51,84 @@ class Game extends React.Component {
       dataType: "json",
       // IF successful
       success: function(data) {
-	      var x = data.solution;
-	      console.log('x:\n')
-	      console.log(x)
-	      var x1 = '';
-	      var x2 = '';
-	      // Place commas
-	      for (var i=0; i < x.length; i++) {
-	      	x1 += x.charAt(i) + ',';}
-
-	      console.log('x1:\n')
-	      console.log(x1)
-
-	      // Place newline chars
-	      for (var i=0; i < x1.length; i+=18) {
-      		x2 += x1.slice(i, i+18) + '\n';}
-
-      	console.log(x2)
-      	alert(x2);
-
-            },
-
-            // If unsuccessful
-            error: function(data) {
-              alert("Error occured");
-              console.log(data);
-            }
-          });      
+        // Log for debug
+        console.log("Call Successful...");
+        console.log(data.solution);
+        // convert string to array
+        let arrayString = data.solution.split("");
+        let arrayNum = Array(81);
+        // convert string array to numbers
+        for (let i = 0; i < arrayString.length; i++) {
+          let x = arrayString[i];
+          arrayNum[i] = Number(x);
         }
-  
+        // Log it for debug
+        console.log(arrayNum);
+        // Update state value
+        self.setState({ value: arrayNum });
+      },
+      // If unsuccessful
+      error: function(data) {
+        alert("Error occured");
+        console.log(data);
+      }
+    });
+  }
+
   // Method to clear the board
   handleClickClear() {
     console.log("You have clicked the Game.handleClickClear button");
-    // this.setState({value: Array(81).fill(0)});
-    location.reload(true);
+    this.setState({ value: Array(81).fill(0) });
   }
-  
-  handleChange() {
-    alert('Something');
+
+  // Method to update the state.value array
+  handleChange(event) {
+    var newValues = this.state.value;
+    newValues[event.target.name] = event.target.value;
+    this.setState({ value: newValues });
   }
-  
+
+  // Render Components
   render() {
-    
     // Make array for 1, 2, ...81
     var arraySquare = Array(81);
-    for (var i = 0; i < 81; i++) {arraySquare[i] = i}
-    
+    for (var i = 0; i < 81; i++) {
+      arraySquare[i] = i;
+    }
+
     // Render the whole game
     return (
       <div className="Game">
-        
         {/* Game renders Board */}
         <div className="Board">
-          
           {/* Board renders Squares */}
-          {arraySquare.map( (i) =>
-                           
-           <Square 
-             key={i}
-             number={i}
-             boardValues={this.state.value}
-             />)}
-          
+          {arraySquare.map(i => (
+            <Square
+              key={i}
+              number={i}
+              boardValues={this.state.value}
+              onChange={this.handleChange}
+            />
+          ))}
         </div>
-        <br></br>
+        <br />
         <div id="buttonDiv">
-          <input 
+          <input
             type="button"
             value="Solve!"
             onClick={this.handleClickSolve}
-            className="SolverButton"></input>
-          <input 
+            className="SolverButton"
+          />
+          <input
             type="button"
             value="Clear"
             onClick={this.handleClickClear}
-            className="SolverButton"></input>
+            className="SolverButton"
+          />
         </div>
       </div>
     );
   }
-  
 }
 
-ReactDOM.render(
-  <Game />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Game />, document.getElementById("app"));
