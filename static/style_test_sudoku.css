@@ -23,9 +23,9 @@ body, html {
 .Square {
   border: 1px solid black;
   border-radius: 0;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
   text-align: right;
 }
 
@@ -36,8 +36,8 @@ body, html {
 .Board {
   display: flex;
   flex-direction: row;
-  height: 365px;
-  width: 365px;
+  height: 275px;
+  width: 275px;
   border: 2.5px solid black;
   margin: 25px auto 0;
   flex-wrap: wrap;
@@ -46,8 +46,8 @@ body, html {
 .Game {
   display: flex;
   flex-direction: column;
-  width: 380px;
-  height:450px;
+  width: 300px;
+  height:400px;
   border: 2px solid blue;
   margin: 0 auto
 }
