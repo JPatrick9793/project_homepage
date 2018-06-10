@@ -23,26 +23,21 @@ body, html {
 .Square {
   border: 1px solid black;
   border-radius: 0;
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: right;
 }
 
 .Square:hover {
   background-color: lightblue;
 }
 
-.Row {
-  display: flex;
-  width: 450px;
-  height: 50px;
-}
-
 .Board {
   display: flex;
   flex-direction: row;
-  height: 455px;
-  width: 455px;
+  height: 365px;
+  width: 365px;
   border: 2.5px solid black;
   margin: 25px auto 0;
   flex-wrap: wrap;
@@ -51,8 +46,8 @@ body, html {
 .Game {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height:550px;
+  width: 400px;
+  height:450px;
   border: 2px solid blue;
 }
 
