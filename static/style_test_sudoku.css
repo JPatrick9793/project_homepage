@@ -46,9 +46,10 @@ body, html {
 .Game {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 380px;
   height:450px;
   border: 2px solid blue;
+  margin: 0 auto
 }
 
 .SolverButton {
