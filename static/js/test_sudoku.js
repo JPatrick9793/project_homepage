@@ -101,6 +101,7 @@ class Game extends React.Component {
     return (
       <div className="Game">
         {/* Game renders Board */}
+        <h4 id="gameTitle">Sudoku Solver!</h4>
         <div className="Board">
           {/* Board renders Squares */}
           {arraySquare.map(i => (
