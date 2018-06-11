@@ -9,9 +9,9 @@ body, html {
 
 #app {
   height: 100%;
-  width: 100%;
   display: flex;
-  flex: 0;
+  flex: 1;
+  min-width: 280px;
 }
 
 .Square, .Row, .Board {
@@ -32,7 +32,8 @@ body, html {
   /* Hide arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; 
+  color: black;
 }
 
 select::-ms-expand {
@@ -58,8 +59,10 @@ select::-ms-expand {
   flex-direction: column;
   width: 300px;
   height:400px;
-  border: 2px solid blue;
-  margin: 0 auto
+  border: 2px solid white;
+  border-radius: 30px;
+  margin: 4% auto 0;
+  color: black;
 }
 
 .SolverButton {
@@ -67,6 +70,7 @@ select::-ms-expand {
   border-radius: 10px;
   width: 100px;
   margin: 0 2%;
+  color: black;
 }
 
 #buttonDiv {
