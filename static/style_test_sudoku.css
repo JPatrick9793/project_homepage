@@ -11,7 +11,7 @@ body, html {
 #app {
   height: 100%;
   display: flex;
-  flex: 1;
+  flex: 5;
   min-width: 280px;
 }
 
