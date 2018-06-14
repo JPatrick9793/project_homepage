@@ -99,7 +99,7 @@ header {
 #header_bottom {
   height:0%;
   width:92%;
-  border-bottom: 2px dashed white;
+  border-bottom: 1px solid white;
   margin: 0 auto;
 }
 
