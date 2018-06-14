@@ -51,9 +51,9 @@ body {
 }
 
 aside {
-  width: 15%;
   min-width: 150px;
   margin: 1% 0;
+  flex: 1;
 }
 
 header div a {
@@ -66,7 +66,9 @@ header div a {
 }
 
 aside div {
-  margin: 10% 0;
+  padding: 5%;
+  text-align: center;
+  height: 5%;
 }
 
 aside div a {
@@ -105,12 +107,16 @@ header {
 
 #name {
   font-size: 35px;
+  flex: 10;
+  flex-wrap: no-wrap;
+  min-width: 300px;
+  text-align: center;
 }
 
 #header_links {
   display: flex;
   flex-direction: row;
   flex: 1;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
