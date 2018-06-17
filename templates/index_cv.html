@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JOHN CONWAY | CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_CV.css') }}">
+</head>
+
+<body>
+
+<div class="bg"></div><div class="bg2"></div>
+
+<header>
+  <div id="name">JOHN CONWAY</div>
+  <div id="header_links">
+    <a href="https://github.com/JPatrick9793"><i class="fa fa-github-square icon"></i></a>
+    <a href="https://www.linkedin.com/in/john-p-conway/"><i class="fa fa-linkedin-square icon"></i></a>
+    <a href="https://www.kaggle.com/jpatrick9793" class="kaggle_icon"><i class="fa fa-font"></i></a>
+  </div>
+</header>
+
+<div id="header_bottom"></div>
+<div class="body_wrapper">
+    <aside>
+      <div><a href="/About_me">About_me</a></div>
+      <div><a href="/Projects">Projects</a></div>
+      <div><a href="/CV">CV</a></div>
+    </aside>
+    <div id="app"></div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  <script type="text/jsx" src="{{url_for('static', filename='js/index_CV.js') }}"></script>
+
+</body>
+</html>
