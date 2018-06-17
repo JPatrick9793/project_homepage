@@ -1,0 +1,14 @@
+.cv_dates {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.cv_links {
+  text-decoration: underline;
+  color: #0000ee;
+  font-family: default;
+}
+
+h2 {
+  border-bottom: 1px solid white;
+}
