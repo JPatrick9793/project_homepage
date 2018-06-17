@@ -13,14 +13,9 @@ from flask import json
 app = Flask(__name__) 
 
 @app.route('/')
-@app.route('/Resume')
-def getResumePage():
-    if request.method == 'GET':
-        return render_template('index.html')
-    if request.method == 'POST':
-        sudoku_unsolved = request.form['sudoku_board']
-        sudoku_solved, sudoku_method = sudoku_solver(sudoku_unsolved)
-        return (sudoku_solved)
+@app.route('/CV')
+def getCVPage():
+    return render_template('index_CV.html')
 
 @app.route('/Projects')
 def getProjectsPage():
