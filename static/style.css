@@ -12,6 +12,12 @@ html {
   padding: 0;
 }
 
+.main {
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+}
+
 body {
   display: flex;
   flex-direction: column;
