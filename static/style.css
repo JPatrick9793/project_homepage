@@ -46,7 +46,7 @@ body {
 
 header div a {
   display: flex;
-  margin-left: 0;
+  margin: 0 1%;
   padding: 0;
   font-size: 46px;
   border: 1px solid blue;
@@ -81,19 +81,22 @@ header div a {
 
 .body_wrapper {
   display: flex;
-  flex: 1;
+  flex: 4;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 4%;
 }
 
 aside {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
   padding: 3% 0;
+  flex-basis: 0;
+  border-top: 1px solid #cccccc;
 }
 
 aside div {
-  margin: 0 0 5%;
+  margin: 0 0 10px;
   text-align: center;
   width: 100%;
   min-width: 100px;
@@ -115,6 +118,7 @@ aside div:active {
   flex: 3;
   width: 100%;
   min-width: 300px;
+  border-top: 1px solid #cccccc;
 }
 
 header {
@@ -131,7 +135,7 @@ header {
 #header_bottom {
   height: 0%;
   width: 92%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #cccccc;
   margin: 0 auto;
 }
 
@@ -141,11 +145,13 @@ header {
   flex-wrap: no-wrap;
   min-width: 300px;
   text-align: center;
+  padding: 5px 0 25px;
 }
 
 #header_links {
   display: flex;
   flex-direction: row;
   flex: 1;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding: 5px 0 25px;
 }
